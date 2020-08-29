@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+	<h1 class="display-4">"LearningSpaces"</h1>
+	<p class="lead">Buchungssystem der Fakultät WiWi von Studierenden für Studierende, Dozenten und Mitarbeiter zur Buchung von Räumen am Campus Rotenbühl.</p>
+</div>
+
+<div class="container">
+	<div class="d-flex flex-column"> <!-- Flex box -->
+		<h4>Registrierte Anwender:</h4>
+		{% for account in accounts %}
+			<p>{{account}}</p>
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock content %}

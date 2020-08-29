@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+    <!-- Main Content -->
+    <div class="content">
+
+
+        <!-- Room Details -->
+        <div class="room">
+
+            <!-- Div 1: Back to Home -->
+            <div>
+                <a href="{% url 'home' %}">zurück zur Startseite</a>
+            </div>
+
+            <!-- Div 2: Room Cancel Form -->
+            <form id="booking-form" action="" method="POST">
+
+                {% csrf_token %}
+                <h2>Bist du sicher die Buchung zu stornieren? Details-</h2>
+                <h3>{{booking}}</h3>
+                <!-- Input Div -->
+                <div class="input-div">
+                    <button type="submit">Storniere die Buchung</button>
+                </div>
+
+            </form>
+
+        </div> <!-- END Room Div -->
+
+    </div> <!-- END Main Content Div -->
+
+{% endblock content %}
